@@ -1,0 +1,179 @@
+@import url('https://fonts.googleapis.com/css2?family=Pixelify+Sans&family=Playfair:ital,opsz,wght@0,5..1200,600;1,5..1200,400&family=Quicksand:wght@300;400;500;600;700&display=swap');
+
+* {
+  box-sizing: border-box;
+  font-family: 'quicksand';
+  color: white;
+}
+
+.container_login {
+  padding: 16px;
+}
+
+.form_login .judul {
+  padding: 0.5rem;
+}
+
+.containerInduk {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.containerInduk .form_login .container_login .judul {
+  display: flex;
+  justify-content: center;
+}
+
+.containerInduk .containerHeader h2 {
+  display: flex;
+  align-items: center;
+  font-size: 30px;
+}
+
+.form_login label {
+  font-size: 20px;
+}
+
+.form_login .signin {
+  margin-block: 1rem;
+}
+
+.form_login {
+  /* border: 1px solid black; */
+  margin-top: 1rem;
+  box-shadow: 49px 37px 100px 100px rgba(57, 170, 227, 0.1);
+  border-radius: 30px;
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  background-color: #252528;
+}
+
+.form_login .container .judul {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.containerInduk .containerHeader {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+}
+
+.containerInduk .containerHeader .logo {
+  width: 50px;
+}
+
+/* ==================================================================== */
+/* Full-width input fields */
+input[type='text'],
+input[type='password'] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+  color: black;
+}
+
+input[type='text']:focus,
+input[type='password']:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+/* Overwrite default styles of hr */
+hr {
+  border: 1px solid #f1f1f1;
+  margin-bottom: 25px;
+}
+
+/* Set a style for the submit/register button */
+.registerbtn {
+  background-color: #277dd9;
+  color: rgb(252, 248, 248);
+  padding: 16px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+  border-radius: 20px;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.registerbtn:hover {
+  opacity: 1;
+}
+
+/* Add a blue text color to links */
+a {
+  color: dodgerblue;
+}
+
+/* Set a grey background color and center the text of the "sign in" section */
+.signin {
+  background-color: #282525;
+  text-align: center;
+  border-radius: 30px;
+}
+
+/* ======================================================================= */
+
+@media screen and (max-width: 810px) {
+  .containerInduk .containerHeader .logo {
+    width: 25px;
+  }
+  .containerInduk .containerHeader h2 {
+    font-size: 23px;
+  }
+  .form_login label {
+    font-size: 17px;
+  }
+
+  .form_login {
+    width: 50%;
+  }
+}
+
+@media screen and (max-width: 618px) {
+  .containerInduk .containerHeader .logo {
+    width: 30px;
+  }
+
+  .containerInduk .containerHeader h2 {
+    font-size: 20px;
+  }
+
+  .form_login {
+    width: 70%;
+  }
+}
+
+@media screen and (max-width: 465px) {
+  .containerInduk .containerHeader h2 {
+    font-size: 20px;
+  }
+
+  .form_login label {
+    font-size: 17px;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .containerInduk .containerHeader .logo {
+    width: 25px;
+  }
+  .containerInduk .containerHeader h2 {
+    font-size: 18px;
+  }
+  .form_login label {
+    font-size: 15px;
+  }
+}
