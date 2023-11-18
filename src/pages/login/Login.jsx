@@ -2,29 +2,32 @@ import React, { useState } from "react";
 import logo from "../../assets/tmovie.png";
 import "./login.css";
 import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
-import Routes from "../../config/Routes";
 
 const Login = () => {
   const [username, setUsername] = useState();
   const [password, setPassword] = useState();
   const history = useHistory();
 
+  if (localStorage.getItem("accessToken")) {
+    localStorage.removeItem("accessToken");
+  }
+
   function handleSubmit(e) {
     e.preventDefault();
-    console.log(`Username : ${username}`);    
-    console.log(`Password : ${password}`);    
+    console.log(`Username : ${username}`);
+    console.log(`Password : ${password}`);
 
-    const savedEmail = localStorage.getItem("userEmail");
     const savedUsername = localStorage.getItem("userUsername");
     const savedPassword = localStorage.getItem("userPassword");
 
-    if ((savedUsername === username) && savedPassword === password) {
+    if (savedUsername === username && savedPassword === password) {
       // Autentikasi berhasil
-      alert('Login berhasil!');
-      history.push('/home');
+      alert("Login berhasil!");
+      localStorage.setItem("accessToken", savedUsername);
+      history.push("/home");
     } else {
       // Autentikasi gagal
-      alert('Email/Username atau Password salah. Silakan coba lagi.');
+      alert("Email/Username atau Password salah. Silakan coba lagi.");
     }
   }
 

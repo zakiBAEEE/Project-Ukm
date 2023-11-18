@@ -10,9 +10,14 @@ import Header from "../components/header/Header";
 import Footer from "../components/footer/Footer";
 
 const Home = () => {
+  // const isAuthenticated = localStorage.getItem("accessToken");
+  // console.log(isAuthenticated);
+  // if (!isAuthenticated) {
+  //   console.log("belum login");
+  // }
   return (
     <>
-    <Header/>
+      <Header />
       <HeroSlide />
       <div className="container">
         <div className="section mb-3">
@@ -55,7 +60,7 @@ const Home = () => {
           <MovieList category={category.tv} type={tvType.top_rated} />
         </div>
       </div>
-      <Footer/>
+      <Footer />
     </>
   );
 };
